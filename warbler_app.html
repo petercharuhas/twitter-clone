@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Warbler</title>
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap/dist/css/bootstrap.css">
+    <script src="https://unpkg.com/jquery"></script>
+    <script src="https://unpkg.com/popper"></script>
+    <script src="https://unpkg.com/bootstrap"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+    <link rel="stylesheet" href="/static/stylesheets/styles.css"> 
+    <link rel="shortcut icon" href="/static/favicon.ico">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a href="#" class="navbar-brand">
+                    <img src="/static/images/warbler-logo.png" alt="logo">
+                    <span>Warbler</span>
+                </a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#signup">Sign up</a></li>
+                <li><a href="#login">Log in</a></li>
+                <li><a href="#messages">Messages</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div id="home">
+            <h1>Welcome to Warbler!</h1>
+            <h4>What's Happening?</h4>
+            <p>New to Warbler? Sign up now to get your own personalized timeline!</p>
+            <a href="#signup" class="btn btn-primary">Sign up</a>
+        </div>
+
+        <div id="signup" class="mt-5">
+            <h2>Sign Up</h2>
+            <form method="POST" action="/signup">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" class="form-control" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Sign Up</button>
+            </form>
+        </div>
+
+        <div id="login" class="mt-5">
+            <h2>Log In</h2>
+            <form method="POST" action="/login">
+                <div class="form-group">
+                    <label for="login-username">Username</label>
+                    <input type="text" class="form-control" id="login-username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" class="form-control" id="login-password" name="password" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Log In</button>
+            </form>
+        </div>
+
+        <div id="messages" class="mt-5">
+            <h2>Messages</h2>
+            <ul class="list-group">
+                <li class="list-group-item">Message 1</li>
+                <li class="list-group-item">Message 2</li>
+                <li class="list-group-item">Message 3</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // Add any JavaScript you need here
+    </script>
+</body>
+
+</html>
